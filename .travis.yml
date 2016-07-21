@@ -1,21 +1,11 @@
-# Config file for automatic testing at travis-ci.org
-# This file will be regenerated if you run travis_pypi_setup.py
-
+deploy:
+  distributions: sdist bdist_wheel
+  'on': {repo: timmartin19/cli-passwords, tags: true}
+  password: {secure: k2K0MclqA9B0rkVqyi7+KRDx7GGKWUn7uW4k8QUoksPLYKekHoo3RFvkO+R4MAN2qG7M4aOEmmN4Dt2GZ/M0nk1lMSXQIfPt78oGKfuRc1+0z7j1Ipl5DaZaFSB0ROG3JDnWhr9dTTH9qlYuhXzUJnAqZYsMSIw88f5RjLhpRfcEJcnZ/pFQNjvQguRPmyfodYgg0xTMI0K1u6dV8OVaXOifFYXReTBaDsr/F1SbGxFkdjlA75RRTdFdPni+Fd4c4tGpna9WpoC6MJIKBI6yvyD9C4wHp+/R8/mv8aSw1rd2CxFe70q6wQeZ5Yja2Qpb9wmtnW/WkT2tRmcvtmACaaIUACHzPxuk9kJSIIETv29klaOCDhdEl7A2xb7K8rsgIBHLsC1AJ4qt+hvno1/tsaLthzNfxezIUlA6TrKioVK2IXu8ZdCBsuHq9ExbEvCS1uEtDN2Wgnl7xu+GqmLXCmGpSoGUkqWft8b6dxznp6cG+teebgJpChYRED/5Mp8NLnzlbu5rSl7WdvozydpM7vrqdG38v1t305pNYA0ZK59YgxEIKWHl/KyTdO+SxPOBOSq0kJN+Pk65F9Dk4eaEJ95oNYOwCAo+k8+Ft2RSwrzKaAy29mwqwJUK+lQno4A5eJd3CzK0UfJ2MTaeGst2Sf3aBlOQF2/SgzYgIMr+xg0=}
+  provider: pypi
+  user: timmartin19
+env: [TOXENV=py35, TOXENV=py34, TOXENV=py33, TOXENV=py27, TOXENV=py26, TOXENV=pypy]
+install: pip install -U tox
 language: python
 python: 3.5
-
-env:
-  - TOXENV=py35
-  - TOXENV=py34
-  - TOXENV=py33
-  - TOXENV=py27
-  - TOXENV=py26
-  - TOXENV=pypy
-
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox
-
-# command to run tests, e.g. python setup.py test
 script: tox -e ${TOXENV}
-
-
