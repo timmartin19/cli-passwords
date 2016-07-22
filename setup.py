@@ -20,7 +20,7 @@ test_requirements = [
 
 setup(
     name='cli-passwords',
-    version='0.1.1',
+    version='0.1.2',
     description="Makes securely getting, storing, and retrying passwords from a command line interface easy!",
     long_description=readme + '\n\n' + history,
     author="Tim Martin",
