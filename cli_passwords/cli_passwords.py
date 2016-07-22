@@ -194,6 +194,7 @@ def retry_password(system, username, display=None, refresh=False, retries=5, exc
         of authentication exception
     :return:
     :rtype: func
+    :raises: TooManyFailedPasswordAttemptsException
     """
     def decorator(func):
         @wraps(func)

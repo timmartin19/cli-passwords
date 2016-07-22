@@ -12,7 +12,7 @@ To install cli-passwords, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install cli_passwords
+    $ pip install cli-passwords
 
 This is the preferred method to install cli-passwords, as it will always install the most recent stable release. 
 
