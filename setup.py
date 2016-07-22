@@ -11,7 +11,7 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
-    # TODO: put package requirements here
+    'keyring'
 ]
 
 test_requirements = [
@@ -19,7 +19,7 @@ test_requirements = [
 ]
 
 setup(
-    name='cli_passwords',
+    name='cli-passwords',
     version='0.1.1',
     description="Makes securely getting, storing, and retrying passwords from a command line interface easy!",
     long_description=readme + '\n\n' + history,
@@ -31,16 +31,11 @@ setup(
     ],
     package_dir={'cli_passwords':
                  'cli_passwords'},
-    entry_points={
-        'console_scripts': [
-            'cli_passwords=cli_passwords.cli:main'
-        ]
-    },
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
     zip_safe=False,
-    keywords='cli_passwords',
+    keywords='cli-passwords command line interface cli password retrieval keyring storage secure',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
